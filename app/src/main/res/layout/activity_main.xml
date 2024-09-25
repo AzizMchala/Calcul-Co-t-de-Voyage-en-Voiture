@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFC107"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Consommation essence (Litres/100Km)"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtConsoEssence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00BCD4"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#F44336"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Source"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Destination"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distance"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prix Litre"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spnTypeEssence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/txtPrixLitreEssence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E91E63">
+
+                <RadioButton
+                    android:id="@+id/rdbRouteNationale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Route Nationale" />
+
+                <RadioButton
+                    android:id="@+id/rdbAutoroute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autoroute" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#CDDC39"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/chkEau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eau (1.5 DT)" />
+
+            <CheckBox
+                android:id="@+id/chkCafe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Café (2.5 DT)" />
+
+            <CheckBox
+                android:id="@+id/chkPizza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pizza (6.0 DT)" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCalculerCoutVoyage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculer coût voyage par voiture" />
+
+    <TextView
+        android:id="@+id/txtResultat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFC107"
+        android:text="Le Total est ..."
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</LinearLayout>
